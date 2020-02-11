@@ -11,49 +11,54 @@ import SkeletonView
 
 class TableViewController: UITableViewController {
     
-//    private var didShow = false
+    private var didShow = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        tableView.isSkeletonable = true
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 50.0
+        tableView.isSkeletonable = true
+        tableView.showAnimatedGradientSkeleton()
     }
     
 //    override func viewDidLayoutSubviews() {
 //        if didShow { return }
 //        didShow = true
-//        tableView.showGradientSkeleton()
+//        tableView.showAnimatedGradientSkeleton()
 //    }
 
     // MARK: - Table view data source
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
-        
-        cell.customLabel.text = "\(indexPath.row)"
-
-        return cell
-    }
-
-}
-
-//extension TableViewController: SkeletonTableViewDataSource {
 //    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        return 10
 //    }
 //
-//    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
-//        return "cell"
-//    }
-//
 //    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
-//        cell.customLabel.text = "cell => \(indexPath.row)"
+//
+//        cell.customLabel.text = "\(indexPath.row)"
+//
 //        return cell
 //    }
-//}
+
+}
+
+extension TableViewController: SkeletonTableViewDataSource {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+
+    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        return "cell"
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
+        cell.customLabel.text = "cell => \(indexPath.row)"
+        return cell
+    }
+}
