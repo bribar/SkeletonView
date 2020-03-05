@@ -18,6 +18,7 @@
 		BF4D957E23F36A350052342F /* Table2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4D957D23F36A350052342F /* Table2ViewController.swift */; };
 		BF4D958123F36AF20052342F /* Table2Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4D957F23F36AF20052342F /* Table2Cell.swift */; };
 		BF4D958223F36AF20052342F /* Table2Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF4D958023F36AF20052342F /* Table2Cell.xib */; };
+		BF6DCE99240F06A2007611BA /* DisplayIssueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6DCE98240F06A2007611BA /* DisplayIssueViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		BF4D957D23F36A350052342F /* Table2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table2ViewController.swift; sourceTree = "<group>"; };
 		BF4D957F23F36AF20052342F /* Table2Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table2Cell.swift; sourceTree = "<group>"; };
 		BF4D958023F36AF20052342F /* Table2Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Table2Cell.xib; sourceTree = "<group>"; };
+		BF6DCE98240F06A2007611BA /* DisplayIssueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayIssueViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				BF4D957F23F36AF20052342F /* Table2Cell.swift */,
 				BF4D958023F36AF20052342F /* Table2Cell.xib */,
 				BF4D957D23F36A350052342F /* Table2ViewController.swift */,
+				BF6DCE98240F06A2007611BA /* DisplayIssueViewController.swift */,
 				BF295CDA23F24A070034D52A /* CustomTableViewCell.swift */,
 				BF295CD823F246A60034D52A /* TableViewController.swift */,
 				BF295CC523F245460034D52A /* Assets.xcassets */,
@@ -222,6 +225,7 @@
 				BF295CBD23F245450034D52A /* AppDelegate.swift in Sources */,
 				BF4D957E23F36A350052342F /* Table2ViewController.swift in Sources */,
 				BF295CBF23F245450034D52A /* SceneDelegate.swift in Sources */,
+				BF6DCE99240F06A2007611BA /* DisplayIssueViewController.swift in Sources */,
 				BF4D958123F36AF20052342F /* Table2Cell.swift in Sources */,
 				BF295CDB23F24A070034D52A /* CustomTableViewCell.swift in Sources */,
 				BF295CD923F246A60034D52A /* TableViewController.swift in Sources */,

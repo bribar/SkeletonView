@@ -14,7 +14,6 @@ class Table2Cell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        tableCellLabel.clipsToBounds = true
     }
     
     

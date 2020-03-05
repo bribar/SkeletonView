@@ -19,9 +19,6 @@ class Table2ViewController: UITableViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 50.0
         tableView.isSkeletonable = true
-    }
-    
-    override func viewDidLayoutSubviews() {
         tableView.showAnimatedGradientSkeleton()
     }
 
