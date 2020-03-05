@@ -18,16 +18,12 @@ class DisplayIssueViewController: UIViewController {
     var skeletonIsShowing = true
     
     @IBAction func buttonPress(_ sender: UIButton) {
-        
         sectionData[0].insert("Mo", at: 0)
         
         let indexPath = IndexPath(item: 0, section: 0)
         tableView.beginUpdates()
         tableView.insertRows(at: [indexPath], with: .none)
-        
         tableView.endUpdates()
-        
-        tableView.hideSkeleton()
         
     }
     
@@ -60,8 +56,9 @@ class DisplayIssueViewController: UIViewController {
                  ["Eve","Mary"],
                  ["Bathsheba","Unknown","Unknown","Unknown","Unknown"]
             ]
-            self.tableView.hideSkeleton()
-            self.tableView.reloadData()
+//            self.tableView.hideSkeleton()
+//            self.tableView.reloadData()
+            self.tableView.hideSkeleton(reloadDataAfter: true, transition: .none)
             
         }
     }
